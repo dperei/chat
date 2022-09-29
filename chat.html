@@ -10,7 +10,23 @@
     }
 </style>
 
-<p onclick="initESW()">BATATINHA</p>
+<a id="liveagent_button_online_5736u0000008ON0" href="javascript://Chat" style="display: none;"
+    onclick="liveagent.startChat('5736u0000008ON0')">
+    Online Chat Content
+</a>
+<div id="liveagent_button_offline_5736u0000008ON0" style="display: none;">
+    Offline Chat Content
+</div>
+<script type="text/javascript">
+    if (!window._laq) { window._laq = []; }
+    window._laq.push(function () {
+        liveagent.showWhenOnline('5736u0000008ON0', document.getElementById('liveagent_button_online_5736u0000008ON0'));
+        liveagent.showWhenOffline('5736u0000008ON0', document.getElementById('liveagent_button_offline_5736u0000008ON0'));
+    });
+</script>
+
+
+<p onclick="initESW()">GIRAFA</p>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
