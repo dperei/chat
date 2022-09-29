@@ -10,7 +10,7 @@
     }
 </style>
 
-<p onclick="iniciar">goiabada</p>
+<p onclick="initESW()">BATATINHA</p>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
@@ -36,13 +36,6 @@
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
-        iniciar()
-        
-    };
-
-
-    function iniciar(){
-        console.log('BBBBBBB');
         embedded_svc.init(
             'https://bancocarrefour--homol.my.salesforce.com',
             'https://homol-bancocarrefour.cs167.force.com',
@@ -58,13 +51,13 @@
                 isOfflineSupportEnabled: false
             }
         );
-    }
+    };
 
     if (!window.embedded_svc) {
         var s = document.createElement('script');
         s.setAttribute('src', 'https://bancocarrefour--homol.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function () {
-            initESW(null);
+            //initESW(null);
         };
         document.body.appendChild(s);
     } else {
