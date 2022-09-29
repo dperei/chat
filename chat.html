@@ -10,12 +10,12 @@
 	}
 </style>
 	
-	<p onclick="initESW">ola</p>
+	<p onclick="initESW">goiabada</p>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = false; //Or false
+		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
@@ -52,14 +52,6 @@
 			}
 		);
 		
-		window.embedded_svc.init(this.chatConfiguration.baseCoreURL, this.chatConfiguration.communityEndpointURL, this.chatConfiguration.gslbBaseURL, this.chatConfiguration.orgId, this.chatConfiguration.eswConfigDevName, this.chatConfiguration.settings);
-		this.interval = setInterval(() => {
-		    if (window.embedded_svc.isIframeReady) {
-			clearInterval(this.interval);
-			window.embedded_svc.onHelpButtonClick();
-		    }
-		}, 50);
-		};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
