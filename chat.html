@@ -10,9 +10,12 @@
     }
 </style>
 
+<p onclick="initESW">Teste</p>
+
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
     var initESW = function (gslbBaseURL) {
+        console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
         embedded_svc.settings.displayHelpButton = true; //Or false
         embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
@@ -54,9 +57,9 @@
     if (!window.embedded_svc) {
         var s = document.createElement('script');
         s.setAttribute('src', 'https://bancocarrefour--homol.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-        s.onload = function () {
-            initESW(null);
-        };
+        //s.onload = function () {
+        //    initESW(null);
+        //};
         document.body.appendChild(s);
     } else {
         initESW('https://service.force.com');
