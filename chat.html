@@ -10,12 +10,11 @@
     }
 </style>
 
-<p onclick="initESW">abacate</p>
+<p onclick="iniciar">abacate</p>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
     var initESW = function (gslbBaseURL) {
-        console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
         embedded_svc.settings.displayHelpButton = true; //Or false
         embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
@@ -37,6 +36,13 @@
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
+        iniciar()
+        
+    };
+
+
+    function iniciar(){
+        console.log('BBBBBBB');
         embedded_svc.init(
             'https://bancocarrefour--homol.my.salesforce.com',
             'https://homol-bancocarrefour.cs167.force.com',
@@ -52,7 +58,7 @@
                 isOfflineSupportEnabled: false
             }
         );
-    };
+    }
 
     if (!window.embedded_svc) {
         var s = document.createElement('script');
